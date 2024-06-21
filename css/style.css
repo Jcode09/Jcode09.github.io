@@ -12,6 +12,7 @@ html {
 /* HOME SECTION */
 .home {
     height: 100vh;
+    width: 20%;
     background-image: url(../img/backgroundcover.jpg);
     background-size: cover;
     background-position: center;
@@ -25,7 +26,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
-    width: 50%;
+    width: 20%;
 }
 
 /* NAV SECTION */
