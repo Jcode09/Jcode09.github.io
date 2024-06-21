@@ -24,7 +24,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 
@@ -33,7 +33,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 45px 8%;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .logo {
@@ -47,12 +49,9 @@ span {
     color: #f9004d;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
 nav ul li {
+    list-style-type: none;
+    display: inline-block;
     padding: 10px 25px;
 }
 
@@ -66,6 +65,12 @@ nav ul li a {
 nav ul li a:hover {
     color: #f9004d;
     transition: all .5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
 }
 
 .btn {
@@ -83,10 +88,17 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
 /* HOMEPAGE SECTION */
 h1 {
     color: white;
-    margin: 20px 0;
+    margin: 20px 0px 20px;
     font-size: 75px;
 }
 
@@ -100,13 +112,6 @@ h4 {
     color: #fcfc;
     letter-spacing: 2px;
     font-size: 20px;
-}
-
-.newslatter {
-    width: 100%;
-    max-width: 380px; /* Adjust this width as per your design */
-    margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Align form elements center within .newslatter */
 }
 
 .newslatter form {
@@ -598,5 +603,51 @@ footer p:nth-child(2) {
 
     #send {
         width: 20%;
+    }
+}
+
+
+/* Example Media Queries */
+@media (max-width: 768px) {
+    /* Adjustments for tablets and smaller screens */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    .logo {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    .content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .newslatter {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .newslatter form input[type="email"],
+    .newslatter form input[type="submit"] {
+        width: 100%;
+        padding: 14px 15px;
+        margin: 10px 0;
     }
 }
