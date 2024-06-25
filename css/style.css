@@ -577,50 +577,46 @@ footer p:nth-child(2) {
 }
 
 
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-    /* Adjustments for smaller mobile screens */
-    .content {
-        width: 80%; /* Adjust content width */
-        max-width: 100%;
-        padding: 0 20px; /* Optional: Add padding */
-    }
-
-    h1 {
-        font-size: 5vw; /* Adjust h1 font size */
-    }
-
-    h3 {
-        font-size: 2vw; /* Adjust h3 font size */
-    }
-
-    h4 {
-        font-size: 1.5vw; /* Adjust h4 font size */
-        margin-top: 10px; /* Add space above h4 */
+    .logo {
+        display: inline-block;
     }
 
     .btn {
-        padding: 10px 25px; /* Adjust button padding */
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        width: 100%;
+        text-align: center;
     }
 }
-
-
 
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 4vw; /* Adjust the font size of 'Jeriebel Calunsag' */
+    .logo {
+        font-size: 20px;
     }
 
-    h3 {
-        font-size: 2vw; /* Adjust the font size of 'UBCOMPESA' */
-    }
-
-    h4 {
-        font-size: 1.4rem; /* Adjust the font size of 'Computer Engineering' */
-        margin-bottom: 10px; /* Optional: Add margin bottom to create space */
+    .btn {
+        padding: 8px 20px;
     }
 }
-
 
 /* Other styles */
 .end {
@@ -631,6 +627,9 @@ footer p:nth-child(2) {
     transition: color 0.3s;
 }
 
+.end:hover {
+    color: #f9004d;
+}
 .end:hover {
     color: #f9004d;
 }
