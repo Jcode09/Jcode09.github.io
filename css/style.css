@@ -610,15 +610,15 @@ footer p:nth-child(2) {
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
     .logo {
-        font-size: 15px; /* Adjust logo font size */
+        font-size: 20px; /* Adjust logo font size */
     }
 
     .btn {
-        padding: 8px 15px; /* Adjust button padding */
+        padding: 8px 20px; /* Adjust button padding */
     }
 
     .content h4 {
-        font-size: 15px; /* Adjust "Computer Engineering" font size */
+        font-size: 24px; /* Adjust "Computer Engineering" font size */
     }
 
     .content h1 {
@@ -626,22 +626,8 @@ footer p:nth-child(2) {
     }
 
     .content h3 {
-        font-size: 15px; /* Adjust "UBCOMPESA" font size */
+        font-size: 20px; /* Adjust "UBCOMPESA" font size */
     }
-}
-
-
-/* Other styles */
-.end {
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 20px;
-    transition: color 0.3s;
-}
-
-.end:hover {
-    color: #f9004d;
 }
 
 
