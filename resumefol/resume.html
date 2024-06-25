@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Jeriebel Calunsag| Web Developer | jbcalunsag@universityofbohol.edu.ph </title>
+	<title>Jeriebel Calunsag| UBCOMPESA | jbcalunsag@universityofbohol.edu.ph </title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 	<meta name="keywords" content="" />
@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
 	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+  
+    <!-- Link to your PDF file -->
+    <link rel="alternate" type="application/pdf" href="nopdf.pdf">
 
 </head>
 <body>
@@ -21,14 +24,14 @@
 			<div class="yui-gc">
 				<div class="yui-u first">
 					<h1>Jeriebel Calunsag</h1>
-					<h2>Web Developer</h2>
+					<h2>UBCOMPESA</h2>
 				</div>
 
 				<div class="yui-u">
 					<div class="contact-info">
-						<h3><a id="pdf" href="#">Download PDF</a></h3>
+						<h3><a id="pdf" href="Resume.png" target="_blank">Download</a></h3>
 						<h3><a href="jbcalunsag@universityofbohol.edu.ph">jbcalunsag@universityofbohol.edu.ph</a></h3>
-						<h3>+63 956 008 4084</h3>
+						<h3>+63 910 406 6292</h3>
 					</div>
 				</div>
 			</div>
@@ -44,7 +47,7 @@
 						</div>
 						<div class="yui-u">
 							<p class="enlarge">
-								A front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations. A responsive design makes your website accessible to all users, regardless of their device. I enjoy being challenge and engaging with projects that requires me to work and to learn more. 
+								A skilled Computer Engineer proficient in designing, developing, and maintaining software and hardware systems. Capable of leveraging expertise in programming languages, algorithms, and data structures to innovate and solve complex technical challenges. Possesses strong analytical skills and a deep understanding of computer architecture and systems integration. Experienced in collaborating within multidisciplinary teams to deliver scalable and efficient solutions. Dedicated to continuous learning and staying updated with emerging technologies to drive technological advancement and business growth. 
 							</p>
 						</div>
 					</div>
@@ -57,7 +60,7 @@
 
 								<div class="talent">
 									<h2>Web Design</h2>
-									<p>I hava a skill for Web developing. I know HTML/CSS skills, Good communication skills. Good at organizing through the website.	</p>
+									<p>I hava a skill for Web developing. I know HTML/CSS/JS skills, Good communication skills. Good at organizing through the website.	</p>
 								</div>
 
 								<div class="talent">
@@ -67,7 +70,7 @@
 
 								<div class="talent">
 									<h2>C Language</h2>
-									<p>I am good at C language Programming, I have good understanding of data structures and algorithms, and debugging.</p>
+									<p>I am good at C/C# language Programming, I have good understanding of data structures and algorithms, and debugging.</p>
 								</div>
 						</div>
 					</div>
@@ -90,9 +93,9 @@
 							</ul>
 
 							<ul class="talent">
-								<li>Variables, data types, and operator in C</li>
-								<li>File handling and command line arguments.</li>
-								<li class="last">Arrays and character array in C</li>
+								<li>Project Development</li>
+								<li>Troubleshooting and Debugging</li>
+								<li class="last">Hardware Interfacing</li>
 							</ul>
 						</div>
 					</div>
@@ -108,7 +111,7 @@
 							<div class="job">
 								<h2>University of Bohol</h2>
 								<h3>Bachelor of Science in Computer Engineering</h3>
-								<h4>2021-2022</h4>
+								<h4>2021-2025</h4>
 								<p>The University of Bohol, also referred to by its acronym U.B., is a private nonsectarian co-educational basic and higher education institution institution of higher learning in Tagbilaran City, Bohol, Philippines. It is the first university to be established in the province of Bohol. </p>
 							</div>
 
@@ -156,7 +159,7 @@
 		</div>
 
 		<div id="ft">
-			<p>Jeriebel Calunsag &mdash; <a href="jbcalunsag@universityofbohol.edu.ph">jbcalunsag@universityofbohol.edu.ph</a> &mdash; +63 956 008 4084</p>
+			<p>Jeriebel Calunsag &mdash; <a href="jbcalunsag@universityofbohol.edu.ph">jbcalunsag@universityofbohol.edu.ph</a> &mdash; +63 910 406 6292</p>
 		</div>
 
 	</div>
@@ -164,7 +167,20 @@
 
 </div>
 
+<script>
+	document.getElementById('download-link').addEventListener('click', function(event) {
+		// Prevent default action (navigation) when clicking on the link
+		event.preventDefault();
+		
+		// Simulate click to trigger download
+		var link = document.createElement('a');
+		link.href = this.getAttribute('href');
+		link.download = this.getAttribute('download');
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	});
+</script>
 
 </body>
 </html>
-
