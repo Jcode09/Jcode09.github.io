@@ -615,21 +615,18 @@ footer p:nth-child(2) {
 
     .btn {
         padding: 8px 20px;
-        margin-top: 10px; /* Add margin top to create space */
     }
+}
 
-    .content h4 {
-        font-size: 15px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
-    }
+/* Other styles */
+.end {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
 
-    .content h1 {
-        font-size: 30px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
-    }
-
-    .content h3 {
-        font-size: 20px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
-    }
+.end:hover {
+    color: #f9004d;
 }
