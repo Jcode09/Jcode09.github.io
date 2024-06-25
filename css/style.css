@@ -607,12 +607,29 @@ footer p:nth-child(2) {
 }
 
 @media (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
     }
 
     nav ul li {
-        padding: 10px 5px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 10px;
+        width: 80%;
+        text-align: center;
     }
 
     h1 {
@@ -639,7 +656,7 @@ footer p:nth-child(2) {
     }
 }
 
-
+/* Other styles */
 .end {
     color: white;
     font-size: 16px;
@@ -651,3 +668,4 @@ footer p:nth-child(2) {
 .end:hover {
     color: #f9004d; /* Change text color to main color of the site on hover */
 }
+
