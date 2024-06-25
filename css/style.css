@@ -610,7 +610,7 @@ footer p:nth-child(2) {
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
     .logo {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .btn {
@@ -618,7 +618,7 @@ footer p:nth-child(2) {
     }
 
  .content h4 {
-        font-size: 5px; /* Adjust the font size for "Computer Engineering" */
+        font-size: 18px; /* Adjust the font size for "Computer Engineering" */
     }
 
     .content h1 {
@@ -626,7 +626,7 @@ footer p:nth-child(2) {
     }
 
     .content h3 {
-        font-size: 5px; /* Adjust the font size for "UBCOMPESA" */
+        font-size: 18px; /* Adjust the font size for "UBCOMPESA" */
     }
 }
 
