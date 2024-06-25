@@ -606,29 +606,39 @@ footer p:nth-child(2) {
 
 @media (max-width: 480px) {
     nav {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 10px;
+    }
+
+    .logo-resume-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .logo {
         flex: 1;
-        text-align: left;
+        text-align: center;
     }
 
     .btn {
         flex: 1;
-        text-align: right;
+        text-align: center;
     }
 
     ul {
-        flex: 100%;
-        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     ul li {
-        padding: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -644,4 +654,3 @@ footer p:nth-child(2) {
 .end:hover {
     color: #f9004d;
 }
-
