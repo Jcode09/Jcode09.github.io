@@ -577,60 +577,45 @@ footer p:nth-child(2) {
 }
 
 
-/* Mobile view adjustments */
+/* Adjustments for mobile view */
 @media (max-width: 768px) {
-    .logo {
-        display: inline-block;
-    }
-
-    .btn {
-        display: inline-block;
-        margin-top: 0;
-        margin-left: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul li {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Adjustments specifically for smaller mobile screens */
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-    }
-
-    .btn {
-        padding: 8px 20px;
-        margin-top: 10px; /* Add margin top to create space */
+    .content {
+        width: 90%; /* Adjust width to fit better on smaller screens */
     }
 
     .content h4 {
-        font-size: 15px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
+        font-size: 18px; /* Adjust the font size of the h4 */
     }
 
     .content h1 {
-        font-size: 30px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
+        font-size: 30px; /* Adjust the font size of the h1 */
+        margin-bottom: 10px; /* Add some bottom margin */
     }
 
     .content h3 {
-        font-size: 20px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
+        font-size: 18px; /* Adjust the font size of the h3 */
+        margin-bottom: 20px; /* Add margin bottom to h3 */
+    }
+}
+
+/* Further adjustments for smaller mobile screens */
+@media (max-width: 480px) {
+    .content {
+        width: 100%; /* Adjust width to fit full width on smaller screens */
+    }
+
+    .content h4 {
+        font-size: 16px; /* Further reduce font size for h4 */
+    }
+
+    .content h1 {
+        font-size: 24px; /* Further reduce font size for h1 */
+        margin-bottom: 8px; /* Adjust margin bottom */
+    }
+
+    .content h3 {
+        font-size: 16px; /* Further reduce font size for h3 */
+        margin-bottom: 15px; /* Adjust margin bottom */
     }
 }
 
