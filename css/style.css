@@ -627,7 +627,7 @@ footer p:nth-child(2) {
     }
 
     .btn {
-        margin-top: 10px;
+        margin: 10px 0;
         width: 80%;
         text-align: center;
     }
@@ -668,4 +668,5 @@ footer p:nth-child(2) {
 .end:hover {
     color: #f9004d; /* Change text color to main color of the site on hover */
 }
+
 
