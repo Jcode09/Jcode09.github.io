@@ -610,25 +610,26 @@ footer p:nth-child(2) {
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
     .logo {
-        font-size: 15px;
+        font-size: 15px; /* Adjust logo font size */
     }
 
     .btn {
-        padding: 8px 20px;
+        padding: 8px 15px; /* Adjust button padding */
     }
 
- .content h4 {
-        font-size: 15px; /* Adjust the font size for "Computer Engineering" */
+    .content h4 {
+        font-size: 15px; /* Adjust "Computer Engineering" font size */
     }
 
     .content h1 {
-        font-size: 36px; /* Adjust the font size for "Jeriebel Calunsag" */
+        font-size: 30px; /* Adjust "Jeriebel Calunsag" font size */
     }
 
     .content h3 {
-        font-size: 18px; /* Adjust the font size for "UBCOMPESA" */
+        font-size: 15px; /* Adjust "UBCOMPESA" font size */
     }
 }
+
 
 /* Other styles */
 .end {
