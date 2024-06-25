@@ -576,83 +576,59 @@ footer p:nth-child(2) {
     transform: scale(1.1);
 }
 
-/* MEDIA QUERIES */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-    .content {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 7vw;
-    }
-
-    h3 {
-        font-size: 4vw;
-    }
-
-    h4 {
-        font-size: 3vw;
-    }
-
-    .about img,
-    .about-text {
-        width: 100%;
-        max-width: none;
-    }
-
-    .card {
-        width: 90%;
-        margin: 15px auto;
-    }
-}
-
-@media (max-width: 480px) {
     nav {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul {
+    .logo,
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    ul {
         flex-direction: column;
         align-items: center;
         width: 100%;
         padding: 0;
     }
 
-    nav ul li {
+    ul li {
         padding: 10px 0;
         width: 100%;
         text-align: center;
     }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        flex: 1;
+        text-align: left;
+    }
 
     .btn {
-        margin: 10px 0;
-        width: 80%;
-        text-align: center;
+        flex: 1;
+        text-align: right;
     }
 
-    h1 {
-        font-size: 9vw;
+    ul {
+        flex: 100%;
+        margin-top: 20px;
     }
 
-    h3 {
-        font-size: 5vw;
-    }
-
-    h4 {
-        font-size: 4vw;
-    }
-
-    .about img,
-    .about-text {
-        width: 100%;
-        max-width: none;
-    }
-
-    .card {
-        width: 90%;
-        margin: 15px auto;
+    ul li {
+        padding: 10px 0;
     }
 }
 
@@ -662,11 +638,10 @@ footer p:nth-child(2) {
     font-size: 16px;
     text-align: center;
     margin-top: 20px;
-    transition: color 0.3s; /* Only transition the color */
+    transition: color 0.3s;
 }
 
 .end:hover {
-    color: #f9004d; /* Change text color to main color of the site on hover */
+    color: #f9004d;
 }
-
 
