@@ -609,14 +609,20 @@ footer p:nth-child(2) {
 
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
+    h1 {
+        font-size: 4vw; /* Adjust the font size of 'Jeriebel Calunsag' */
     }
 
-    .btn {
-        padding: 8px 20px;
+    h3 {
+        font-size: 3vw; /* Adjust the font size of 'UBCOMPESA' */
+    }
+
+    h4 {
+        font-size: 1rem; /* Adjust the font size of 'Computer Engineering' */
+        margin-bottom: 10px; /* Optional: Add margin bottom to create space */
     }
 }
+
 
 /* Other styles */
 .end {
