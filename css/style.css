@@ -616,6 +616,18 @@ footer p:nth-child(2) {
     .btn {
         padding: 8px 20px;
     }
+
+ .content h4 {
+        font-size: 24px; /* Adjust the font size for "Computer Engineering" */
+    }
+
+    .content h1 {
+        font-size: 36px; /* Adjust the font size for "Jeriebel Calunsag" */
+    }
+
+    .content h3 {
+        font-size: 24px; /* Adjust the font size for "UBCOMPESA" */
+    }
 }
 
 /* Other styles */
@@ -630,3 +642,5 @@ footer p:nth-child(2) {
 .end:hover {
     color: #f9004d;
 }
+
+
