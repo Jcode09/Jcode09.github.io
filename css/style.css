@@ -605,7 +605,22 @@ footer p:nth-child(2) {
         width: 100%;
         text-align: center;
     }
+
+    .content h4 {
+        font-size: 1.8rem; /* Adjust the font size for 'Computer Engineering' */
+    }
+
+    .content h1 {
+        font-size: 3rem; /* Adjust the font size for 'Jeriebel Calunsag' */
+        margin-bottom: 10px; /* Add margin bottom to create space */
+    }
+
+    .content h3 {
+        font-size: 1.5rem; /* Adjust the font size for 'UBCOMPESA' */
+        margin-bottom: 10px; /* Add margin bottom to create space */
+    }
 }
+
 
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
@@ -617,19 +632,19 @@ footer p:nth-child(2) {
         padding: 8px 20px;
         margin-top: 10px; /* Add margin top to create space */
     }
-
+    
     .content h4 {
-        font-size: 15px;
-        margin-bottom: 10px; /* Add margin bottom to create space */
+        font-size: 1.8rem; /* Adjust the font size for 'Computer Engineering' */
     }
 
     .content h1 {
-        font-size: 30px;
+        font-size: 3rem; /* Adjust the font size for 'Jeriebel Calunsag' */
         margin-bottom: 10px; /* Add margin bottom to create space */
     }
 
     .content h3 {
-        font-size: 20px;
+        font-size: 1.5rem; /* Adjust the font size for 'UBCOMPESA' */
         margin-bottom: 10px; /* Add margin bottom to create space */
     }
 }
+
