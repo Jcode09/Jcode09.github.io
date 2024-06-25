@@ -577,35 +577,31 @@ footer p:nth-child(2) {
 }
 
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
-    .logo {
-        display: inline-block;
+    /* Adjustments for smaller mobile screens */
+    .content {
+        width: 80%; /* Adjust content width */
+        max-width: 100%;
+        padding: 0 20px; /* Optional: Add padding */
+    }
+
+    h1 {
+        font-size: 5vw; /* Adjust h1 font size */
+    }
+
+    h3 {
+        font-size: 2vw; /* Adjust h3 font size */
+    }
+
+    h4 {
+        font-size: 1.5vw; /* Adjust h4 font size */
     }
 
     .btn {
-        display: inline-block;
-        margin-top: 0;
-        margin-left: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul li {
-        width: 100%;
-        text-align: center;
+        padding: 10px 25px; /* Adjust button padding */
     }
 }
+
 
 /* Adjustments specifically for smaller mobile screens */
 @media (max-width: 480px) {
@@ -614,11 +610,11 @@ footer p:nth-child(2) {
     }
 
     h3 {
-        font-size: 3vw; /* Adjust the font size of 'UBCOMPESA' */
+        font-size: 2vw; /* Adjust the font size of 'UBCOMPESA' */
     }
 
     h4 {
-        font-size: 1rem; /* Adjust the font size of 'Computer Engineering' */
+        font-size: 1.4rem; /* Adjust the font size of 'Computer Engineering' */
         margin-bottom: 10px; /* Optional: Add margin bottom to create space */
     }
 }
