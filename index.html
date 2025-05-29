@@ -1,226 +1,852 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Calunsag Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> 
-
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Portfolio Calunsag</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-
-
-	<!----Home Section---->
-
-	<div class="home"> 
-		<nav>
-			<h2 class="logo">Portfo<span>lio</span></h2>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About Me</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#skill">Skills</a></li>
-				<li><a href="#contacts">Contact Me</a></li>
-			</ul>
-			<a href="resumefol/resume.html" class="btn">Resume</a>
-		</nav>
-		
-
-		<div class="content">
-			<h4>Computer Engineering</h4>
-			<h1>Jeriebel <span> Calunsag</span></h1>
-			<h3>UBCOMPESA</h3>
-			<div class="newslatter">
-				<form>
-					<input type="email" name="email" id="mail" placeholder="Enter Your Email">
-					<input type="button" name="submit" value="Contact Me" onclick="location.href='#contacts';">
-				</form>			
-			</div>
-		</div>
-	</div>
-
-	<!----About Section---->
-	<section id="about">
-		<div class="main">
-			<img src="img/jbl.png">
-			<div class="about-text">
-				<p> </p>
-				<h2>About Me</h2>
-				<h5>Student <span>& Developer</span></h5>
-				<p>I am a Computer Engineer of University of Bohol, as a UBCOMPESA I have faced great challenges through these journeys and created a lot of projects and activities, I am here to share my skills and knowledges to help you with your needs. </p>
-				<button type="button" class="btn" onclick="location.href='#contacts';">Let's Talk</button>
-			</div>
-	</section>
-
-<!----Project Section---->
-<section id="projects">
-    <h1 class="headings">PROJECTS</h1>
-	<p>Here are some of my Projects and you can download the files to try it:</p>
-    <div class="gallery">
-        <div class="gallery-item">
-            <a href="project/proj1/proj.html">
-                <img src="img/regulacalcu1.png" alt="">
-            </a>
-            <div class="title">Regula Falsi Calculator</div>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" href="https://www.facebook.com/jeriebel.bulac"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://mail.google.com/mail/u/0/#inbox"><i class="ti-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/jebeeelllll/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://github.com/Jcode09"><i class="ti-github" aria-hidden="true"></i></a></li>
+            </ul>  
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h1 class="header-title">Jeriebel Calunsag</h1>
+                <h6 class="header-mono" >Frond-End Designer | Developer</h6>
+                <button class="btn btn-primary btn-rounded" onclick="window.location.href='assets/resumefol/resume.html';">
+                    <i class="ti-printer pr-2"></i>Print Resume
+                </button>                
+            </div>
         </div>
-        <div class="gallery-item">
-            <a href="project/proj2/proj2.html">
-                <img src="img/calendar.png" alt="">
-            </a>
-            <div class="title">Event Scheduler</div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Jeriebel Calunsag</h5>
+                        <div class="brand-subtitle">Web Designer | Developer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Projects</a>
+                    </li>
+                  <!--   <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li> -->
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="gallery-item">
-            <a href="project/proj3/proj3.html">
-                <img src="img/user.png" alt="">
-            </a>
-            <div class="title">Portfolio</div>
-        </div>
-        <div class="gallery-item">
-            <a href="project/proj4/proj4.html">
-                <img src="img/operation.png" alt="">
-            </a>
-            <div class="title">OS - FCFS Project</div>
-        </div>
-        <div class="gallery-item">
-            <a href="project/proj5/proj5.html">
-                <img src="img/photobel.png" alt="">
-            </a>
-            <div class="title">Machine Vision - Photo Editor</div>
-        </div>
-        <div class="gallery-item">
-            <a href="project/proj6/proj6.html">
-                <img src="img/compiler.png" alt="">
-            </a>
-            <div class="title">Assembly Project</div>
-        </div>
-		<div class="gallery-item">
-            <a href="project/proj7/proj7.html">
-                <img src="img/laboratory.png" alt="">
-            </a>
-            <div class="title">Laboratory Inventory</div>
-        </div>    
-        <div class="gallery-item">
-            <a href="project/proj8/proj8.html">
-                <img src="img/arduino.png" alt="">
-            </a>
-            <div class="title">Arduino Projects</div>
-        </div>
-		<div class="gallery-item">
-            <a href="project/proj9/proj9.html">
-                <img src="img/lab.png" alt="">
-            </a>
-            <div class="title">Lab Projects</div>
-        </div>
-		<div class="gallery-item">
-            <a href="project/proj10/proj10.html">
-                <img src="img/autocad.png" alt="">
-            </a>
-            <div class="title">AutoCad</div>
-        </div>
-		<div class="gallery-item">
-            <a href="https://drive.google.com/drive/folders/1UQdguuwWt0wI5UgtauZWjemODCGye1ha?usp=sharing">
-                <img src="img/plus.png" alt="">
-            </a>
-            <div class="title">Add Project</div>
-        </div> 
-		<!--  <div class="gallery-item">
-            <a href="https://drive.google.com/drive/folders/1UQdguuwWt0wI5UgtauZWjemODCGye1ha?usp=sharing">
-                <img src="img/plus.png" alt="">
-            </a>
-            <div class="title">Add Project</div>
-        </div>      ---->
-    </div>
-</section>
-
-
-	<!-----Skill Section----------->
-	<section id="skill">
-			<h1 class="headings">Skills</h1>
-		</div>
-
-		<div class="box">
-			<div class="card">
-				<i class="fa-solid fa-sitemap"></i>
-				<h5>Web Develop</h5>
-				<div class="pra">
-					<p>During my 1st year, I learned my skill for Web developing. I know HTML/CSS/JS skills, Good at organizing through the website and front-end.</p>
-
-					<p style="text-align: center;">
-						<a class="button" href="https://www.w3schools.com/whatis/">Learn</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="card">
-				<i class="fab fa-java"></i>
-				<h5>Java</h5>
-				<div class="pra">
-					<p>During my 2nd year, I learned my skill in Java, I hava a good understanding of service-oriented architecture, web services, Keeps the code simple and bug-fixing.</p>
-
-					<p style="text-align: center;">
-						<a class="button" href="https://www.w3schools.com/java/">Learn</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="card">
-				<i class="fa-solid fa-c"></i>
-				<h5>C/C# Language</h5>
-				<div class="pra">
-					<p>During my 3rd year, I learned my skill in C/C# language Programming, created Arduino Projects, creating interactive objects etc. and skills for debugging.</p>
-
-					<p style="text-align: center;">
-						<a class="button" href="https://www.tutorialspoint.com/arduino/index.htm">Learn</a>
-					</p>
-				</div>
-			</div>
-		</div>
-</section>
-
-<!------Contact Section------>
-<div class="contact-me">
-    <p>Let Me Help You.</p>
-    <a class="button-two" href="resumefol/resume.html">Hire Me</a>
-</div>
-<section id="contacts">
-    <h1 class="headings">CONTACTS</h1>
-    <div class="contact-info">
-        <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <p>Phone: 0910 4066 292</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <p>Email: jebelbulac@gmail.com</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Location: Poblacion, Dauis, Bohol</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-globe"></i>
-            <p>Website: https://jcode09.github.io/Portfolio/</p>
+    </nav>
+    <div class="container-fluid">
+        <div id="about" class="row about-section">
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Who am I ?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">A Web Designer / Developer Located In Our Lovely Earth</h5>
+                <p class="mt-20">I am a Computer Engineer of University of Bohol, as a UBCOMPESA I have faced great challenges through these journeys and created a lot of projects and activities, I am here to share my skills and knowledges to help you with your needs.</p>
+                <a href="assets/resumefol/CalunsagResume.pdf" download>
+                    <button class="btn btn-outline-danger">
+                        <i class="icon-down-circled2"></i> Download My CV
+                    </button>
+                </a>                
+            </div> 
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Personal Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Birthdate</span> : 09/22/2002</li>
+                    <li><span>Email</span> : jebelbulac@gmail.com</li>
+                    <li><span>Phone</span> : +63 951 928 4084</li>
+                    <li><span>Facebook</span> : Jeriebel Bulac Calunsag </li>
+                    <li><span>Address</span> :  Poblacion, Dauis, Bohol.</li>
+                </ul>
+                <ul class="social-icons pt-3">
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                </ul>  
+            </div>
+            <div class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Expertise</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>UX|UI Designer</h6>
+                        <p class="subtitle"> creating digital products and services that are user-friendly and accessible intuitive interfaces.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Web Developer</h6>
+                        <p class="subtitle">designing, building, and maintaining websites and web applications.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>Hardware Engineer</h6>
+                        <p class="subtitle">designs, develops, and tests computer hardware and components.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--Resume Section-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Expertise</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">4th Year</h6>
+                            <P>Web Development</P>
+                            <P class="subtitle">Created a Thesis Web Development, CompED a Social Media Platform for Collaborative Learning and Event Management.</P>
+                            <hr>
+                            <h6 class="title text-danger">3rd Year</h6>
+                            <P>Arduino | Hardware</P>
+                            <P class="subtitle">During my 3rd year, I learned my skill in C/C#/C++ language Programming, created Arduino Projects, and skills for debugging. Also other Languages like Assembly Language.</P>
+                            <hr>
+                            <h6 class="title text-danger">2nd Year</h6>
+                            <P>Java Expert</P>
+                            <P class="subtitle">During my 2nd year, I learned my skill in Java, I have a good understanding of service-oriented architecture, web services, and bug-fixing.</P>
+                            <hr>
+                            <h6 class="title text-danger">1st Year</h6>
+                            <P>Front-end</P>
+                            <P class="subtitle">During my 1st year, I learned my skill for Web developing. I know HTML/CSS/JS skills, Good at organizing through the website and front-end.</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Education</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">2021-2025</h6>
+                            <P>University of Bohol | Bachelor of Science in Computer Engineering</P>
+                            <P class="subtitle">The University of Bohol, also referred to by its acronym U.B., is a private nonsectarian co-educational basic and higher education institution institution of higher learning in Tagbilaran City, Bohol, Philippines. It is the first university to be established in the province of Bohol.</P>
+                            <hr>
+                            <h6 class="title text-danger">2019-2020</h6>
+                            <P>University of Bohol | Senior High School</P>
+                            <P class="subtitle">UNIVERSITY OF BOHOL- UNIVERSITY HIGH SCHOOL VISION MISSION AND GOALS. VISION: A vibrant university high school nurturing lives for a great future.</P>
+                            <hr>
+                            <h6 class="title text-danger">2016 - 2019</h6>
+                            <P>Biking Technical Vocational High School | High School</P>
+                            <P class="subtitle">Biking Technical Vocational High School, Dauis, Bohol. The ONLY Technical Vocational School of Dauis, Bohol.</P>
+                            <hr>
+                            <h6 class="title text-danger">2011 - 2016</h6>
+                            <P>Holy Name University | Junior Year</P>
+                            <P class="subtitle">Holy Name University is a private, Catholic, research, co-educational basic and higher education institution run by the Philippine Southern Province of the Society of the Divine Word in Tagbilaran City, Bohol, Philippines. It was founded by Fr. Alphonse G. Lesage, SVD a Divine Word Missionary in 1947.</P>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Skills</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                           <h6>hTL5 &amp; CSS3</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>JavaScript</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>PHP</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>SQL</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Java</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Figma</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Languages</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                           <h6>English</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Cebuano</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Tagalog</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="row ">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">240</h1>
+                            <p class="text-light mb-1">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">13</h1>
+                            <p class="text-light mb-1">Project Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">8</h1>
+                            <p class="text-light mb-1">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">2k</h1>
+                            <p class="text-light mb-1">Coffee Drinked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="service">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Services</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-vector text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Web Designing</h5>
+                            <P class="subtitle">creating the visual layout and design of a website. </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-write text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Figma Designing</h5>
+                            <P class="subtitle">creating wireframes, user flows, and interactive prototypes.</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-package text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Java Applications</h5>
+                            <P class="subtitle">development of software applications using the Java programming language</P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-map-alt text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Arduino Projects</h5>
+                            <P class="subtitle">offering of custom-built electronic devices and systems utilizing Arduino boards.</P>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">...</h5>
+                            <P class="subtitle"> </P>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-support text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">...</h5>
+                            <P class="subtitle"></P>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </div>
+    </section>
+
+
+<!-- 
+    <section class="section bg-custom-gray" id="price">
+        <div class="container">
+            <h1 class="mb-5"><span class="text-danger">Packs</span> Pricing</h1>
+            <div class="row align-items-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="price-card text-center mb-4">
+                        <h3 class="price-card-title">Free</h3>
+                        <div class="price-card-cost">
+                            
+                            <span class="num">₱0</span>
+                            <span class="date">MO</span>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">5 <span class="text-muted">Project</span></li>
+                            <li class="list-item">1GB <span class="text-muted">Storage</span></li>
+                            <li class="list-item"><span class="text-muted">No Domain</span></li>
+                            <li class="list-item">1 <span class="text-muted">User</span></li>
+                        </ul>
+                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="price-card text-center mb-4">
+                        <h3 class="price-card-title">Basic</h3>
+                        <div class="price-card-cost">
+                           
+                            <span class="num">₱560</span>
+                            <span class="date">MO</span>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">50 <span class="text-muted">Project</span></li>
+                            <li class="list-item">10GB <span class="text-muted">Storage</span></li>
+                            <li class="list-item">1<span class="text-muted">Domain</span></li>
+                            <li class="list-item">5 <span class="text-muted">User</span></li>
+                        </ul>
+                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="price-card text-center price-card-requried mb-4">
+                        <h3 class="price-card-title">Exclusive</h3>
+                        <div class="price-card-cost">
+                           
+                            <span class="num">₱1,400</span>
+                            <span class="date">MO</span>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">150 <span class="text-muted">Project</span></li>
+                            <li class="list-item">15GB <span class="text-muted">Storage</span></li>
+                            <li class="list-item">5<span class="text-muted"> Domain</span></li>
+                            <li class="list-item">15<span class="text-muted">User</span></li>
+                        </ul>
+                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="price-card text-center mb-4">
+                        <h3 class="price-card-title">Pro</h3>
+                        <div class="price-card-cost">
+                           
+                            <span class="num">₱5,544</span>
+                            <span class="date">MO</span>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">500 <span class="text-muted">Project</span></li>
+                            <li class="list-item">1000GB <span class="text-muted">Storage</span></li>
+                            <li class="list-item">10<span class="text-muted"> Domain</span></li>
+                            <li class="list-item">Unlimite<span class="text-muted">User</span></li>
+                        </ul>
+                        <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-dark py-5">
+        <div class="container text-center">
+            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
+            <button class="btn btn-primary btn-rounded w-lg" >Hire me</button>
+        </div>
+    </section>
+-->
+
+    <!-- Portfolio Section -->
+    <section class="section bg-custom-gray" id="portfolio">
+        <div class="container">
+            <h1 class="mb-5"><span class="text-danger">My</span> Projects</h1>
+            <div class="portfolio">
+                <div class="filters d-flex">
+                    <a href="#" data-filter=".new" class="active">
+                        Projects
+                    </a>
+                    <a href="#" data-filter=".advertising">
+                        Hardware
+                    </a>
+                    <a href="#" data-filter=".branding">
+                        Activities
+                    </a>
+                    <a href="#" data-filter=".web">
+                        Software
+                    </a>
+                   
+                </div>
+                <div class="portfolio-container">
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj3/proj3.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/portfolio.jpg" class="img-fluid" alt="Web Design 1">
+                            <div class="content-holder">
+                                <div class="text-holder">
+                                    <h6 class="title">Portfolio</h6>
+                                    <p class="subtitle">A portfolio website can be used when applying for jobs or internships.</p>
+                                </div>
+                            </div>   
+                        </div>             
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj5/proj5.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/photoeditor.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/photoeditor.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Photo Editor Machine Vision</h6>
+                                    <p class="subtitle">Photo Editor created by Machine Learning.</p>
+                                </div>
+                            </div> 
+                        </div>                         
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 advertising new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj8/proj8.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/arduinoprojects.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/arduinoprojects.png"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Arduino Projects</h6>
+                                    <p class="subtitle">Arduino Projects with Source codes.</p>
+                                </div>
+                            </div>    
+                        </div>              
+                    </div> 
+
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj11/proj11.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/soulabel.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/soulabel.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Soulabel Cafe</h6>
+                                    <p class="subtitle">Our goal is to offer the best experience to our guests!</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div>
+
+                        <!-- 
+                    <div class="col-md-6 col-lg-4 advertising"> 
+                        <div class="portfolio-item" data-toggle="modal" data-target="#modal1ad">
+                            <img src="assets/imgs/advertising-1.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Assembly Project</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>                                                       
+                    </div> 
+
+                      <div class="modal fade" id="modal1ad" tabindex="-1" role="dialog" aria-labelledby="modal1Title" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal1Title">Web Design Project 1</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="assets/imgs/.jpg" class="img-fluid mb-3" alt="Sample Image">
+                                    <p>Detailed description of the project goes here. This is a sample text.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="assets/files/sample1.pdf" download class="btn btn-primary">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                -->
+
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj12/proj12.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/nikeshop.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                           <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/nikeshop.png"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Nike Shop</h6>
+                                    <p class="subtitle">Let the attitude have the edge in your Nike Shoes!</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 web new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj13/proj13.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/Jsavings.png" class="img-fluid" alt="Web Design 1">
+                            <div class="content-holder">
+                                <div class="text-holder">
+                                    <h6 class="title">JSavings</h6>
+                                    <p class="subtitle">A Financial Recorder to record your personal savings and expenses.</p>
+                                </div>
+                            </div>   
+                        </div>             
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 advertising new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj6/proj6.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/assembly.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">       
+                           <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/assembly.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Assembly Project</h6>
+                                    <p class="subtitle">This project is distinctive in its use of assembly language for programming the ATMEGA328 microcontroller. </p>
+                                </div>
+                            </div>
+                        </div>                                                       
+                    </div> 
+
+                     <!-- 
+                    <div class="col-md-6 col-lg-4 advertising new"> 
+                        <div class="portfolio-item" data-toggle="modal" data-target="#modal4ad">
+                            <img src="assets/imgs/advertising-4.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">            
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Hardware</h6>
+                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div> 
+
+                     <div class="modal fade" id="modal4ad" tabindex="-1" role="dialog" aria-labelledby="modal1Title" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal1Title">Web Design Project 1</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="assets/imgs/.jpg" class="img-fluid mb-3" alt="Sample Image">
+                                    <p>Detailed description of the project goes here. This is a sample text.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="assets/files/sample1.pdf" download class="btn btn-primary">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj1/proj.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/falsi-secant.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                        
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/falsi-secant.png"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Regula Falsi/Secant</h6>
+                                    <p class="subtitle">Numerical Methods Project!</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div> 
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj2/proj2.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/eventcalendar.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">  
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/eventcalendar.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Event Calendar</h6>
+                                    <p class="subtitle">A system to ease the activity of finding a suitable time for an event such as meetings, conferences, trips, etc.</p>
+                                </div>
+                            </div>
+                        </div>                                                     
+                    </div> 
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj4/proj4.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/operatingsystem.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">   
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/operatingsystem.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">OS-FCFS</h6>
+                                    <p class="subtitle">A scheduling simulator that will demonstrate the operation of this approach.</p>
+                                </div>
+                            </div>
+                        </div>                                                    
+                    </div> 
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj9/proj9.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/cpeplab.jpeg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                      
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/cpeplab.jpeg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">CPEP Laboratory</h6>
+                                    <p class="subtitle">These are the Exercises and Activities during our Second Year Major, it consists problems, debugging etc.</p>
+                                </div>
+                            </div>
+                        </div>                                                      
+                    </div> 
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj7/proj7.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/labinventory.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/labinventory.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Laboratory Inventory</h6>
+                                    <p class="subtitle">A system to borrow an inventory of laboratory equipment and tools.</p>
+                                </div>
+                            </div>
+                        </div>                                                   
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 branding new">
+                        <div class="portfolio-item" onclick="location.href='assets/project/proj10/proj10.html';" style="cursor: pointer;">
+                            <img src="assets/imgs/autocad.jpg" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">          
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/autocad.jpg"></a>
+                                <div class="text-holder">
+                                    <h6 class="title">Autocad Projects</h6>
+                                    <p class="subtitle">Activities that uses precise 2D and 3D drafting, design, and modelling with solids, surfaces, mesh objects, documentation features, and more.</p>
+                                </div>
+                            </div>
+                        </div>                                                   
+                    </div>
+
+                </div> 
+            </div>  
+        </div>            
+    </section>
+
+<section id="video-project" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="portfolio-item video-card" onclick="window.open('https://www.youtube.com/watch?v=oV929TkMxJ0', '_blank');" style="cursor: pointer;">
+          <div class="video-thumbnail-wrapper position-relative">
+            <img src="assets/imgs/COMPED THUMBNAIL.jpg" class="img-fluid rounded" alt="Project Video Thumbnail">
+            <div class="video-overlay d-flex justify-content-center align-items-center">
+              <i class="ti-control-play play-icon text-white"></i>
+            </div>
+          </div>
+          <div class="content-holder p-4 text-center">
+            <div class="text-holder">
+              <h5 class="title">CompEd</h5>
+              <p class="subtitle">CompEd: A Social Media Platform for Collaborative Learning and Event Management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-	<!------Footer Section--------->
-	<footer>
-		<p>Jeriebel Calunsag</p>
-		<p>For more information, please click the link below to follow me:</p>
-		<div class="social">
-			<a href="https://www.facebook.com/j.jbaxx/"><i class="fab fa-facebook-f"></i></a>
-			<a href="https://www.instagram.com/jebeeelllll/"><i class="fab fa-instagram"></i></a>
-			<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-		</div>
-		<p class="end">CopyRight By Jeriebel Calunsag</p>
-	</footer>
+
+
+<hr style="border-top: 1px solid #353535; flex-grow: 1; margin-left: 10px;">
+
+    <div class="section contact" id="contact">
+        <div id="map" class="map"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h4 class="contact-title">Send a message</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input  class="form-control" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit" class="form-control btn-rounded btn-primary" >Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-card">
+                        <h4 class="contact-title">Get in touch</h4>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-mobile icon-md"></i>
+                            </div>
+                            <div class="col-10 ">
+                                <h6 class="d-inline">Phone : <br> <span class="text-muted">+63 951 928 4084</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-map-alt icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Address :<br> <span class="text-muted">Poblacion, Dauis, Bohol.</span></h6>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-1 pt-1 mr-1">
+                                <i class="ti-envelope icon-md"></i>
+                            </div>
+                            <div class="col-10">
+                                <h6 class="d-inline">Email :<br> <span class="text-muted">jebelbulac@gmail.com</span></h6>
+                            </div>
+                        </div>
+                        <ul class="social-icons pt-4">
+                            <li class="social-item"><a class="social-link text-dark" href="https://www.facebook.com/jeriebel.bulac"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="https://mail.google.com/mail/u/0/#inbox"><i class="ti-google" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="https://www.instagram.com/jebeeelllll/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="https://github.com/Jcode09"><i class="ti-github" aria-hidden="true"></i></a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http:// .com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">JCode</span></a> 
+            </p>
+        </div>
+    </footer>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google mpas -->
+    <script async defer src="https://maps.app.goo.gl/yeZXkerftyBnCwFg8"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- js -->
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
-
-
-
