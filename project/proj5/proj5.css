@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     padding: 0;
     margin: 0;
@@ -7,14 +7,16 @@
 }
 
 body {
-    background-color: #101010;
+    background: linear-gradient(to bottom, #202020, #101010); 
     color: white;
     line-height: 1.6;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 
-/* Nav Section */
 nav {
-    background-color: #202020;
+    background: rgba(32, 32, 32, 0.9); 
     padding: 20px 8%;
     display: flex;
     justify-content: space-between;
@@ -25,6 +27,8 @@ nav {
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
+
+
 
 .logo {
     color: white;
@@ -58,14 +62,16 @@ nav {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
 .nav-links a:hover {
-    background-color: #333333;
-    transform: translateY(-2px);
+    background-color: #333333; 
+    transform: translateY(-2px); 
+    color: #f9004d; 
 }
 
-/* Project Details Section */
+
 .project-details {
-    padding: 120px 20px 20px; /* Adjusted padding to accommodate fixed nav */
+    padding: 120px 20px 20px; 
     text-align: center;
 }
 
@@ -104,7 +110,7 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Button Styles */
+
 .btn {
     display: inline-block;
     padding: 10px 25px;
@@ -113,20 +119,20 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .btn:hover {
     background-color: #e10040;
-    transform: translateY(-2px); /* Added transform on hover */
+    transform: translateY(-2px); 
 }
 
-/* Footer Section */
 footer {
-    background: #202020;
+    background: linear-gradient(to bottom, #101010, #070707); 
     padding: 30px 20px;
     text-align: center;
-    margin-top: 50px; /* Added margin to separate from content */
+    margin-top: auto; 
+    color: #bbb;
 }
 
 footer p {
@@ -164,9 +170,9 @@ footer p:last-child {
 }
 
 .project-details .image {
-    max-width: 800px; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center the entire section horizontally */
-    text-align: center; /* Center the text (h2) within the section */
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .project-details .image h2 {
@@ -177,26 +183,26 @@ footer p:last-child {
 
 .project-details .image img {
     width: 100%;
-    max-width: 600px; /* Adjust the maximum width of images */
-    margin-bottom: 20px; /* Space between images */
+    max-width: 600px; 
+    margin-bottom: 20px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
     nav {
         padding: 20px 5%;
     }
 
     .nav-links {
-        flex-direction: row; /* Changed to row for horizontal alignment */
-        flex-wrap: wrap; /* Allow wrapping to fit smaller screens */
-        justify-content: center; /* Center the nav links */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
 
     .nav-links li {
-        margin: 5px; /* Reduced margin for better spacing */
+        margin: 5px; 
     }
 
     .logo {
@@ -233,13 +239,13 @@ footer p:last-child {
     }
 
     .nav-links {
-        flex-direction: row; /* Changed to row for horizontal alignment */
-        flex-wrap: wrap; /* Allow wrapping to fit smaller screens */
-        justify-content: center; /* Center the nav links */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
 
     .nav-links li {
-        margin: 5px; /* Reduced margin for better spacing */
+        margin: 5px; 
     }
 
     .nav-links a {
