@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* HOME SECTION */
+
 .home {
     height: 100vh;
     width: 100%;
@@ -29,7 +29,7 @@ html {
     width: 80%;
 }
 
-/* NAV SECTION */
+
 nav {
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: 20px; /* Adjust the font size here */
+    font-size: 20px; 
 }
 
 nav ul li a:hover {
@@ -89,7 +89,7 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-/* HOMEPAGE SECTION */
+
 h1 {
     color: white;
     margin: 20px 0;
@@ -144,12 +144,15 @@ h4 {
     right: 6px;
 }
 
-/* ABOUT SECTION */
+
+/* ABOUT SECTION Automatic Transition */
 #about {
-    background: #191919;
+    background: linear-gradient(to bottom, #202020, #101010); 
     width: 100%;
     padding: 100px 0;
+    position: relative;   
 }
+ 
 
 .main {
     width: 95%;
@@ -158,20 +161,76 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
-.about img {
+.image-container {
     width: 100%;
     max-width: 430px;
-    border-radius: 15px;
     margin-bottom: 30px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Ensure only the active image is visible */
+.image-container img.active {
+    opacity: 1;
+}
+
+/* Animation for automatic image transition */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Apply animation to all images */
+.image-container img:nth-child(1) {
+    animation: fade 20s infinite 0s; /* Adjusted to 20s for each image */
+}
+
+.image-container img:nth-child(2) {
+    animation: fade 20s infinite 5s; /* Delayed by 5s */
+}
+
+.image-container img:nth-child(3) {
+    animation: fade 20s infinite 10s; /* Delayed by 10s */
+}
+
+.image-container img:nth-child(4) {
+    animation: fade 20s infinite 15s; /* Delayed by 15s */
 }
 
 .about-text {
     width: 100%;
     max-width: 550px;
+    margin-top: 460px; /* Adjust this value as needed to ensure the text is below the image */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initial position for slide-in effect */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for appearing effect */
+}
+
+#about:hover .about-text {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(0); /* Slide-in effect */
 }
 
 .about-text h2 {
@@ -205,7 +264,7 @@ button {
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 button:hover {
@@ -214,14 +273,16 @@ button:hover {
     cursor: pointer;
 }
 
+
+
+
 /* PROJECTS SECTION */
 #projects {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(to bottom, #202020, #202020, #101010); /* Vertical gradient */
     color: white;
     align-items: center;
-    text-align: center;
     padding: 20px;
 }
 
@@ -232,22 +293,51 @@ button:hover {
     box-sizing: border-box;
 }
 
-.gallery img {
+.gallery-item {
+    position: relative;
     width: 100%;
     max-width: 360px;
-    height: auto;
     margin: 10px;
-    border-radius: 15px;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
-    transition: .3s;
+/* Show the gallery items on hover */
+#projects:hover .gallery-item {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
 }
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 1s ease; /* Smooth scaling transition */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    display: none;
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.gallery-item:hover .title {
+    display: block;
+    color: #f9004d; /* Main color of the site */
+}
+
 
 /* SKILLS SECTION */
 #skill {
-    background: #101010;
+    background: linear-gradient(to bottom, #101010, #101010, #191919); /* Vertical gradient */
     width: 100%;
     padding: 100px 0;
 }
@@ -255,11 +345,14 @@ button:hover {
 #skill .headings {
     display: block;
     color: white;
-    font-size: 8vw;
+    font-size: 5vw;  /* font-size: 8vw; */
     width: 100%;
     max-width: 1130px;
     margin: 0 auto;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .box {
@@ -267,6 +360,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1130px;
+    margin: 0 auto;
 }
 
 .card {
@@ -280,6 +375,33 @@ button:hover {
     position: relative;
     overflow: hidden;
     text-align: center;
+    transition: transform 0.3s ease, margin-bottom 0.3s ease, opacity 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card i,
+.card h5,
+.pra p,
+.card .button {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+}
+
+#skill:hover .headings,
+#skill:hover .card,
+#skill:hover .card i,
+#skill:hover .card h5,
+#skill:hover .pra p,
+#skill:hover .card .button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Swipe up and slight scale effect */
+    margin-bottom: 20px;
 }
 
 .card i {
@@ -319,6 +441,7 @@ h5 {
     border: 2px solid #f9004d;
     cursor: pointer;
 }
+
 
 
 /* PROJECTS SECTION Name */
@@ -376,18 +499,20 @@ h5 {
 .contact-me {
     width: 100%;
     height: 290px;
-    background: #191919;
+    background: linear-gradient(to bottom, #191919, #0c0c0c, #000000 /*#1e00c4 */  /*#1e00c5 */); /* Vertical gradient */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
+
 .contact-me p {
     color: white;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 25px;
 }
+
 .contact-me .button-two {
     background-color: #f9004d;
     color: white;
@@ -398,6 +523,7 @@ h5 {
     border-radius: 30px;
     transition: .4s;
 }
+
 .contact-me .button-two:hover {
     background-color: transparent;
     border: 2px solid #f9004d;
@@ -414,115 +540,48 @@ h5 {
     color: white;
     padding: 20px;
 }
+
 .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px 0;
 }
+
 .contact-item {
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
+
 .contact-item i {
     font-size: 24px;
     margin-right: 10px;
     color: #f9004d;
 }
+
 .contact-item p {
     font-size: 18px;
 }
 
-/* CONTACT ME SECTION 
-.contact-me {
+
+
+/* FOOTER SECTION 
+footer {
+    position: relative;
     width: 100%;
-    padding: 50px 20px; 
-    background: #191919;
+    height: auto;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('../img/Computer-Science-Engineering-Subjects-1-min.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    padding: 50px 0;
 }
-
-.contact-me p {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-.contact-me .button-two {
-    background-color: #f9004d;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .4s;
-}
-
-.contact-me .button-two:hover {
-    background-color: transparent;
-    border: 2px solid #f9004d;
-    cursor: pointer;
-}
-*/
-
-
-/* CONTACT FORM SECTION 
-#contacts {
-    width: 100%;
-    padding: 50px 20px; 
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#contacts h1 {
-    margin-bottom: 20px;
-}
-
-.form {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input, #msg, #send {
-    width: 100%;
-    padding: 12px;
-    margin: 15px 0;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-
-#msg {
-    height: 150px;
-}
-
-#send {
-    background-color: #f9004d;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-#send:hover {
-    background-color: white;
-    color: #f9004d;
-    box-shadow: 0 0 10px white;
-    border: 1px solid #f9004d;
-} 
 */
 
 /* FOOTER SECTION */
@@ -530,7 +589,9 @@ footer {
     position: relative;
     width: 100%;
     height: auto;
-    background: #101010;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Gradient overlay */
+        #000000; /* Solid background color */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -538,23 +599,36 @@ footer {
     padding: 50px 0;
 }
 
+footer::before {
+    content: "";
+    position: absolute;
+    top: -20px; /* Adjusts the position of the line above the footer */
+    left: 25%; /* Start the line at the quarter width */
+    width: 50%; /* Line will be half the width of the footer */
+    height: 1px; /* Thin line */
+    background-color: #f9004d; /* Color of the line */
+    z-index: 1; /* Ensure it's above the footer background */
+}
+
 footer p:nth-child(1) {
     font-size: 30px;
     color: white;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center; /* Center the text */
 }
 
 footer p:nth-child(2) {
     color: white;
     font-size: 17px;
     width: 500px;
-    text-align: center;
+    text-align: center; /* Center the text */
     line-height: 26px;
 }
 
 .social {
     display: flex;
+    justify-content: center; /* Center the social icons */
 }
 
 .social a {
@@ -577,74 +651,217 @@ footer p:nth-child(2) {
 }
 
 
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    .logo {
-        display: inline-block;
-    }
 
-    .btn {
-        display: inline-block;
-        margin-top: 0;
-        margin-left: 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 4vw; /* Adjust h1 font size for medium screens */
-    }
-
-    h3 {
-        font-size: 1.8vw; /* Adjust h3 font size for medium screens */
-    }
-
-    h4 {
-        font-size: 1.3vw; /* Adjust h4 font size for medium screens */
-        margin-top: 10px; /* Add space above h4 */
-    }
+/* INFORMATION SECTION */
+#information {
+    background: linear-gradient(to bottom, #101010, #101010, #202020 ); /* Vertical gradient */
+    width: 100%;
+    padding: 100px 0;
 }
 
-/* Adjustments specifically for smaller mobile screens */
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
+#information .headings {
+    color: white;
+    font-size: 3vw;
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1130px;
+    margin: 50px auto 0;
+}
+
+.info-item {
+    position: relative;
+    background-color: #191919;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, margin-bottom 0.3s ease, opacity 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.info-item i,
+.info-text h5,
+.info-text p {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+}
+
+#information:hover .headings,
+#information:hover .info-item,
+#information:hover .info-item i,
+#information:hover .info-text h5,
+#information:hover .info-text p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-item:hover {
+    transform: translateY(-20px) scale(1.05);
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 48px;
+    color: #f9004d;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.info-text h5 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    color: #fcfcfc;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: #101010;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    text-align: center;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.info-item:hover .info-box {
+    display: block;
+    opacity: 1;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .information-header {
+        font-size: 6vw;
     }
 
-    .btn {
+    .information-content {
+        font-size: 3vw;
+    }
+
+    .information-button {
         padding: 8px 20px;
     }
+}
 
-    h1 {
-        font-size: 28px; /* Adjust h1 font size for smaller screens */
+@media (max-width: 480px) {
+    .information-header {
+        font-size: 8vw;
     }
 
-    h3 {
-        font-size: 18px; /* Adjust h3 font size for smaller screens */
+    .information-content {
+        font-size: 4vw;
     }
 
-    h4 {
-        font-size: 16px; /* Adjust h4 font size for smaller screens */
-        margin-top: 10px; /* Add space above h4 */
+    .information-button {
+        padding: 6px 15px;
     }
 }
 
-/* Other styles */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    .about img,
+    .about-text {
+        width: 100%;
+        max-width: none;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
+    h4 {
+        font-size: 4vw;
+    }
+
+    .about img,
+    .about-text {
+        width: 100%;
+        max-width: none;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
 .end {
     color: white;
     font-size: 16px;
@@ -657,3 +874,158 @@ footer p:nth-child(2) {
     color: #f9004d;
 }
 
+
+
+
+
+
+/* NAV ICON ALL
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-icon {
+    display: none; 
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    font-size: 24px; 
+    color: white; 
+}
+
+nav.scrolled {
+    display: none;
+}
+
+#nav-icon.scrolled {
+    display: block; 
+}
+
+
+nav.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000; 
+    width: 200px; 
+}
+
+nav.active ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.active ul li {
+    margin: 10px 0;
+}
+
+nav.active ul li a {
+    color: white; 
+    text-decoration: none;
+    font-size: 18px; 
+}
+
+#nav-icon {
+    display: none; 
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+#nav-icon.scrolled {
+    display: block; 
+}
+
+
+nav.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000; 
+    width: 200px; 
+}
+*/
+
+
+
+
+/* Initial nav styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Nav icon styles */
+#nav-icon {
+    display: none; /* Hide the icon initially */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    font-size: 24px; /* Adjust the size of the icon */
+    color: white; /* Make the icon white */
+}
+
+/* Show the icon and hide nav when scrolling */
+nav.scrolled {
+    display: none; /* Hide the nav when scrolled */
+}
+
+#nav-icon.scrolled {
+    display: block; /* Show the icon when scrolled */
+}
+
+/* Show navigation when toggled */
+nav.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other elements */
+    width: 200px; /* Adjust width as needed */
+}
+
+nav.active ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.active ul li {
+    margin: 10px 0;
+}
+
+nav.active ul li a {
+    color: white; /* Make text white */
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size as needed */
+}
